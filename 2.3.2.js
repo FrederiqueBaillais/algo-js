@@ -1,5 +1,3 @@
-const readlineSync = require("readline-sync");
-
 let nb = 0;
 while (nb < 101){
     let res = nb%2;
