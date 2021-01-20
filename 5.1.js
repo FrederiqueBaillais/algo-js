@@ -3,11 +3,15 @@ const readlineSync = require("readline-sync");
 let name = new String;
 let year = new Number;
 let mb = new Array;
-let myLibrary = {name: '',year: '',members: []};
 let n = 0;
+let myLibrary = {
+    "name": '',
+    "year": '',
+    "members": []
+};
 
-//fonction qui demande à l'utilisateur le nom, l'année de production et les membres de casting
-//de la série préférée de l'utilisateur
+//function that asks the user the name, production year and casting members
+//and inserts the userdatas into an object composed of data and tables
 function askTvSerie(){
     myLibrary.name = readlineSync.question('Please enter the name of your favorite TV serie : ');
     myLibrary.year = readlineSync.question('Please enter the production year of your favorite TV serie : ');
@@ -17,11 +21,9 @@ function askTvSerie(){
         myLibrary.members.push(mb);
     }
     myLibrary.members.pop(n-1);
-    //retour de la donnée members sous forme de tableau nommé mbCast dans la fonction cast()
     return myLibrary;
 }
 
 console.log(askTvSerie());
 console.log(myLibrary);
 console.log(JSON.stringify(myLibrary));
-//console.log(JSON.parse(myLibrary));
