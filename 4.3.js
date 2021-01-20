@@ -14,14 +14,11 @@ function rand10(){
 // returns every number created by random from 1 to 10 in a table "randTab"
 function multiRand(n){
     let finalTab = new Array;
-    //boucle pour affichersdans le tableau
-    for(let i = 0;i < n; i++){
-        //boucle pour insérer les rand dans le tableau
-        for (let j = 0;j < n;j++){
-            temp = rand10();
-            finalTab.push(temp);
-        }
-        return finalTab;
+    //boucle pour insérer les rand dans le tableau
+    for (let j = 0;j < n;j++){
+        temp = rand10();
+        finalTab.push(temp);
     }
+    return finalTab;
 }
 console.log(multiRand(n));
