@@ -1,11 +1,3 @@
-/*
-//2. **Distance between two points**. Create a 
-//function that calculate the distance between two points 
-//(every point have two coordinates: x, y). _HINT: Your function 
-//Should receive four parameters_.
-*/
-
-
 const readlineSync = require("readline-sync");
 
 let xA = new Number(readlineSync.question('Please enter a coordinate x for the point A : '));
@@ -13,6 +5,7 @@ let yA = new Number(readlineSync.question('Please enter a coordinate y for the p
 let xB = new Number(readlineSync.question('Please enter a coordinate x for the point B : '));
 let yB = new Number(readlineSync.question('Please enter a coordinate y for the point B : '));
 
+//calculate the distance between two points (x,y)
 function calcDistance (xA, yA, xB, yB){
     this.xA = xA;
     this.yA = yA;
