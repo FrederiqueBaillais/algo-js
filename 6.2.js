@@ -45,3 +45,11 @@ let rect3 = new Rectangle(1,1,3,5);
 let rect4 = new Rectangle(8,2,2,5);
 //vérifier en appelant la méthode collides pour l'autre rectangle
 console.log(rect3.collides(rect4));
+
+//troisième test qui doit renvoyer true
+//premier rectangle à créer
+let rect5 = new Rectangle(1,1,3,5);
+//deuxième rectangle à créer
+let rect6 = new Rectangle(2,2,3,3);
+//vérifier en appelant la méthode collides pour l'autre rectangle
+console.log(rect5.collides(rect6));
