@@ -13,15 +13,15 @@ class Circle {
     }
     //méthode qui ajuste la position du cercle aux nouvelles valeurs nommées xOffset et yOffset
     move(xOffset,yOffset){
-        this.xPos = xOffset;
-        this.yPos = yOffset;
+        this.xPos += xOffset;
+        this.yPos += yOffset;
     }
     //accesseur (getter) qui calcule Pi*R² pour la surface d'un cercle
     get surface (){
         return Math.PI*(this.radius*this.radius);
     }
 }
-let myCircle = new Circle(0,0,2);
+let myCircle = new Circle(1,6,2);
 console.log(myCircle);
 console.log('surface du cercle : '+myCircle.surface);
 //je déplace le cercle ci-dessus créé aux nouvelles coordonnées
