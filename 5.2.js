@@ -2,8 +2,6 @@ const readlineSync = require("readline-sync");
 
 let mb = new Array;
 let myLibrary = {name: '',year: '',members: []};
-let n = 0;
-let tabMb = new Array();
 
 //fonction qui demande à l'utilisateur le nom, l'année de production et les membres de casting
 //de la série préférée de l'utilisateur
@@ -15,6 +13,7 @@ function askTvSerie(){
         myLibrary.members.push(mb);
     }
     //permet de supprimer l'entrée stop qui a permis de sortir du programme
+    let n = 0;
     myLibrary.members.pop(n-1);
     //affiche le contenu de myLibrary
     return myLibrary;
@@ -22,20 +21,12 @@ function askTvSerie(){
 
 //fonction qui mélange les entrées des membres et les renvoie dans le désordre
 //dans un nouveau tableau
-function randomizeCast(truc){
+function randomizeCast(tabMbRand){
     for (let i = 0;i < myLibrary.members.length; i++) {
-        tempo = Math.floor(Math.random()*myLibrary.members.length);
-        tabMb.push(truc[tempo]);
-
-        temp = myLibrary.members[i];
-        tabMb[tempo] = myLibrary.members[i];
-        tabMb[tempo] = temp;
+        tabMbRand = myLibrary.members.sort(() => Math.random() - 0.5);
         }
-return tabMb;
+return tabMbRand;
 }
 
 console.log(askTvSerie());
 console.log(randomizeCast(myLibrary.members));
-
-//reste à faire en sorte que le random ne répète pas plusieurs
-//fois la même information
