@@ -18,10 +18,10 @@ class Rectangle {
         var B = otherRectangle.topLeftXPos+otherRectangle.length;
         var C = this.topLeftYPos+this.width;
         var D = otherRectangle.topLeftYPos+otherRectangle.width;
-        if ((((this.topLeftXPos < otherRectangle.topLeftXPos)&&(otherRectangle.topLeftXPos < A))
-            || ((this.topLeftXPos < B)&&(B < A)))
-            && (((this.topLeftYPos < otherRectangle.topLeftYPos)&&(otherRectangle.topLeftYPos < C))
-            || ((this.topLeftYPos < D)&&(D < C)))) {
+        if ((((this.topLeftXPos <= otherRectangle.topLeftXPos)&&(otherRectangle.topLeftXPos <= A))
+            || ((this.topLeftXPos <= B)&&(B <= A)))
+            && (((this.topLeftYPos <= otherRectangle.topLeftYPos)&&(otherRectangle.topLeftYPos <= C))
+            || ((this.topLeftYPos <= D)&&(D <= C)))) {
             return true;
         }
         else {
@@ -30,6 +30,14 @@ class Rectangle {
 
     }
 }
+//false
+//premier rectangle à créer
+let rect7 = new Rectangle(2,4,2,3);
+//deuxième rectangle à créer
+let rect8 = new Rectangle(3,7,2,3);
+//vérifier en appelant la méthode collides pour l'autre rectangle
+console.log(rect7.collides(rect8));
+
 //premier test qui doit renvoyer true
 //premier rectangle à créer
 let rect1 = new Rectangle(1,1,3,5);
